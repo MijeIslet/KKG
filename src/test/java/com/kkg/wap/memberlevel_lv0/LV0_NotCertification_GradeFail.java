@@ -1,0 +1,68 @@
+package com.kkg.wap.memberlevel_lv0;
+
+import com.kkg.wap.framework.KkgFrame;
+import com.kkg.wap.pageobject.Login_LV0_1;
+import com.kkg.wap.pageobject.Login_LV0_3;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class LV0_NotCertification_GradeFail {
+    private static KkgFrame kkgFrame;
+    boolean guanggao;
+
+    @BeforeClass
+    public void setUp() throws Exception {
+        kkgFrame = new KkgFrame(1);
+        // whaleMove = new WhaleMove(1, "http://localhost:4444/wd/hub");
+        //登录
+        Login_LV0_3 login = new Login_LV0_3(kkgFrame);
+        login.Login();
+        kkgFrame.expectTextExistOrNot(true,"搜索商品");
+    }
+
+    @AfterClass
+    public void tearDown() throws Exception {
+        kkgFrame.quit();
+    }
+
+    @Test(description = "普通用户升级会员时未实名时升级失败")
+    public void LV0_NotCertification_GradeFail() throws Exception {
+        //关闭广告
+        guanggao = kkgFrame.isContainTextFromPageSourceOrNot("<div class=\"pub_mask \" id=\"pub_mask\" style=\"display: block;\">");
+        if (guanggao) {
+            kkgFrame.clickById("closeMask");
+        }
+        //点击我的
+        kkgFrame.clickByXpath(".//span[text()='我的']");
+        kkgFrame.pause(2000);
+       //点击会员中心
+        kkgFrame.clickByXpath("//*[@href='/bmpay/hxauth/newUserLevel']");
+        kkgFrame.WebDriverWaitUntilPageContainsElementByClass("grade_btn");
+        //点击开通体验用户
+        kkgFrame.clickByClass("grade_btn");
+        kkgFrame.WebDriverWaitUntilPageContainsElementByClass("pupot_btn");
+        //点击立即开通
+        kkgFrame.clickByClass("pupot_btn");
+        kkgFrame.pause(2000);
+        //断言
+        try {
+            kkgFrame.expectTextExistOrNot(true,"请先实名认证[A]");
+            System.out.println("请先实名认证[A]");
+        } catch (Exception e) {
+            System.out.println("用例执行失败");
+        }
+        kkgFrame.pause(2000);
+        //点击开通体验用户
+        kkgFrame.clickByClass("grade_btn");
+        kkgFrame.WebDriverWaitUntilPageContainsElementByClass("pupot_btn");
+        //点击认证跳转到实名信息填写页面
+        try {
+            kkgFrame.clickByLinkText("认证");
+            kkgFrame.WebDriverWaitUntilPageContainsElementById("acct_name");
+            kkgFrame.expectXpathExistOrNotByXpath(true, "//*[@id='acct_name']");
+        }catch (Exception e){
+            System.out.println("从升级页面实名跳转页面不正确");
+        }
+    }
+}

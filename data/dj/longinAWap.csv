@@ -1,0 +1,8 @@
+key,depict,value,xpath
+,mobile=?
+url,登录url,,url!longinAWap
+set,输入用户名,set!mobile,//*[@id='username']
+set,输入密码,123456,//*[@id='pwd']
+click,点击登录,,//*[@class='col-xs-6 p0']/button[@class='btn btn-info btn-block']
+sleep,暂停2S,,2000
+

@@ -1,0 +1,14 @@
+key,depict,value,xpath
+url,跳转到首页,,url!index
+sleep,暂停1.5S,,1500
+click,点击AU预订,,//*[@class='gold_price']/div[@class='reserve_img']
+scroll,scroll,,500
+click,点击3件,,//*[@id='three']
+click,点击预付款,,//*[@id='yfk']
+get,获取定金,￥!dingjin,//*[@id='dingjin']
+get,获取预付款,￥!orderPrice,//*[@id='orderPrice']
+get,获取服务费,￥!fee,//*[@id='fee']
+get,获取返回金豆,backBounty,//*[@id='backBounty']
+get,获取实付价格,￥!realPrice,//*[@id='realPrice']
+click,点击预订,,//*[@id='yuding']
+get,获取订单号,订单号：!orderNumber,//*[@id='des_cont_ul_hx']/li/div[@class='des_cont_head']/p

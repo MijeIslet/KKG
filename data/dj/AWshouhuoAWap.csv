@@ -1,0 +1,11 @@
+key,depict,value,xpath
+url,跳转到我的,,url!userhome
+isclick,点击可能出现的活动通知,,//*[@id='closeMask']
+click,点击待收货,,//*[@class='l-order-list ico-ul clearfix']/li[4]/a/div
+click,点击确认收货,,//*[@id="refundBtn"]/div/span
+click,点击确认,,//*[@class="aui_buttons"]/button[1]
+,,,
+url,跳转到我的,,url!userhome
+isclick,点击可能出现的活动通知,,//*[@id='closeMask']
+click,点击待收货,,//*[@class='l-order-list ico-ul clearfix']/li[5]/a/div
+seetext,检查指定文本,get!orderNumber,orderNumber

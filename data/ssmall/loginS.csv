@@ -1,0 +1,8 @@
+key,depict,value,xpath
+url,S系统登录url,,url!loginS
+sleep,暂停3S,,3000
+set,输入用户名,admin,//*[@class='login-box-body']/div/div[1]/input
+set,输入密码,123,//*[@class='login-box-body']/div/div[2]/input
+sleep,暂停20S,,20000
+refresh,refresh,,refresh
+sleep,暂停3S,,3000

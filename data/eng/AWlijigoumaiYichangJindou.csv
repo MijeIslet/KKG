@@ -1,0 +1,9 @@
+key,depict,value,xpath
+,jindou-use=?,,
+url,跳转到商品详情页,,url!viewsJDYC
+sleep,暂停1.5S,,1500
+click,点击立即购买,,//*[@class='btn btn-danger btn-buy']
+click,点击提交订单,,//*[@class='J_payBtn btn btn-danger btn-buy']
+scroll,滑动200px,scroll,200
+set,输入金豆,set!jindou-use,//*[@id='payBounty']
+sleep,暂停3S,,3000

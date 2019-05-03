@@ -1,0 +1,16 @@
+key,depict,value,xpath
+click,跳转到交易,,//*[@id="topbar-collapse"]/ul[1]/li[3]/a
+click,点击退款管理,,//*[@id="collapse-nav0"]/li[@id="menuId-795"]/a
+set,输入订单号,set!orderNumber,//*[@id="number"]
+click,点击搜索订单,,//*[@id='form1']/div[1]/input[@class='criteria-btn']
+click,点击处理,,//*[@id='check']
+sleep,暂停1.5S,,1500
+,,,
+click,点击订单退款,,//*[@id='prePayBtn']
+click,点击确定,,/html/body/div[1]/div/table/tbody/tr[2]/td[2]/div/table/tbody/tr[3]/td/div/button[1]
+refresh,刷新页面,,refresh
+sleep,暂停1.5S,,1500
+scroll,向上滚动500px,,500
+set,输入备注,阿斯蒂芬,//*[@id='adminMessage']
+click,点击提交处理,,//*[@id='col1']/tbody/tr[26]/td/div/input[@class='criteria-btn']
+click,点击确定,,/html/body/div[1]/div/table/tbody/tr[2]/td[2]/div/table/tbody/tr[3]/td/div/button[1]

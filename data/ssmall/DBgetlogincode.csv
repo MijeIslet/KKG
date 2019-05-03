@@ -1,0 +1,7 @@
+key,depict,value,xpath
+,mobile=?,,
+click,跳转到系统,,//*[@id="topbar-collapse"]/ul[1]/li[7]/a
+refresh,refresh,,refresh
+set,输入手机号,set!mobile,//*[@id='form1']/div[2]/input[2]
+click,点击搜索,,//*[@id='form1']/div[2]/input[4]
+get,获取logincode,logincode,//*[@id='admin-content']/div/table[@id='item']/tbody/tr/td[2]

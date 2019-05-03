@@ -1,0 +1,9 @@
+key,depict,value,xpath
+,total_number=?
+url,跳转到我的,,url!userhome
+sleep,暂停1.5S,,1500
+refresh,刷新一下,refresh,refresh
+isclick,点击可能出现的活动通知,,//*[@id='closeMask']
+get,获取总余额,total-!total_number,//*[@id='amMarginRemain']
+get,获取可用余额,total-use-!total_number,//*[@id='amMarginRemain-use']
+get,获取可用金豆,jindou-!total_number,//*[@id='jindou']

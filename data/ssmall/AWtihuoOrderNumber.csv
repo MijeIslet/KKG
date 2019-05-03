@@ -1,0 +1,28 @@
+key,depict,value,xpath
+url,跳转到我的,,url!userhome
+isclick,点击可能出现的活动通知,,//*[@id='closeMask']
+click,点击预付款,,//*[@class='l-order-list ico-ul clearfix']/li[1]/a/div
+click,点击指定订单,get!orderNumber,"//a[contains(@href,'get!')]"
+sleep,暂停3S,,3000
+click,点击提货,,//*[@class='ret_btn_in1']/a[@class='ret_btn_zcgm']
+get,获取商品总额,￥!productTotalPrice,//em[@class='yellow productTotalPrice']
+getvalue,获取提货定金,￥!map_extraCharge,//*[@id='map_extraCharge']
+getvalue,获取提货补贴,￥!map_charge,//*[@id='map_charge']
+get,获取提货实付款,totalPrice,//*[@id='totalPrice']
+click,点击确认提货,,//a[@class='J_payBtn btn btn-danger btn-buy']
+,,,
+seedfile,获取我的资金参数,total_number=2,AWgetmytotal
+,,,
+click,点击预付款,,//*[@class='l-order-list ico-ul clearfix']/li[1]/a/div
+click,点击历史订单,,//*[@class='des_head_in']/li[2]/p
+click,点击指定订单,get!orderNumber,//*[@id="lsdd_list"]/li[1]/a
+seetext,检查指定文本,get!orderNumber,orderNumber
+get,获取货值增减,￥!top_profitClose,//*[@id='top_profitClose']
+,,,
+url,跳转到我的,,url!userhome
+isclick,点击可能出现的活动通知,,//*[@id='closeMask']
+click,点击待付款,,//*[@class='l-order-list ico-ul clearfix']/li[2]/a/div
+click,点击去付款,,//*[@id="container"]/div[3]/div[2]/div/span[2]
+click,点击确认支付,,//*[@class='confirm-payment']
+set,输入支付密码,123456,//*[@id='pay-password']
+click,点击确定,,//*[@class='affirm']

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- allow-return-values 默认值为FALSE,表示返回值将被忽略 -->
+<suite name="kkg" thread-count="2" parallel="classes" >
+       <test verbose="2" name="class" preserve-order="true">
+          <classes>
+
+              <!--常规测试用例-->
+
+               <!--预订黄金100g-->
+               <class name="com.kkg.wap.yfk.GoldYuDing_100_1"/>
+              <!--&lt;!&ndash;预订白银5000g&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.yfk.SilverYuDing_5000_1"/>-->
+              <!--&lt;!&ndash;黄金退订&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.yfk.GoldTuiDing_100_1"/>-->
+              <!--&lt;!&ndash;黄金回购&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.yfk.GoldHuiGou_100_1"/>-->
+              <!--&lt;!&ndash;预订提货&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.yfk.YuDingTiHuo"/>-->
+              <!--&lt;!&ndash;校验预订提货后出入金正确&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.yfk.VerifyAfterYuDingTiHuoChuRuJinIsCorrect"/>-->
+              <!--&lt;!&ndash;测试支付宝下单成功 &ndash;&gt;-->
+              <!--<class name="com.kkg.wap.pay.Aipay"/>-->
+              <!--&lt;!&ndash;测试用户未实名支付宝下单成功 &ndash;&gt;-->
+              <!--<class name="com.kkg.wap.pay.Aipay_weishiming"/>-->
+              <!--&lt;!&ndash;测试用户用金豆支付下单成功 &ndash;&gt;-->
+              <!--<class name="com.kkg.wap.pay.Jindoupay"/>-->
+              <!--&lt;!&ndash;测试用户用金豆+余额支付下单成功 &ndash;&gt;-->
+              <!--<class name="com.kkg.wap.pay.YuerAndJindoupay"/>-->
+              <!--&lt;!&ndash;测试用户用余额支付下单成功 &ndash;&gt;-->
+              <!--<class name="com.kkg.wap.pay.YuErBuZupay"/>-->
+              <!--&lt;!&ndash;测试解约后再签约成功&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.signingandcanceling.SigningAndCanceling"/>-->
+              <!--&lt;!&ndash;退差价-退余额成功&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.tuichajia.Yuerpay_TuiYuer_YouxiantuiKdou"/>-->
+              <!--&lt;!&ndash;退差价-退余额+金豆成功&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.tuichajia.YuerAndJindoupay_TuiYuerAndJindou_YouxiantuiKdou"/>-->
+              <!--&lt;!&ndash;退款-支付宝支付订单线下退款&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.tuikuan.OfflineRefund"/>-->
+              <!--&lt;!&ndash;退款-退余额+金豆&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.tuikuan.TuiJindouAndYuer"/>-->
+              <!--&lt;!&ndash;测试用预付款券下单成功&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.yfk_quan.LV3_YongQuanYuDingGold_100_1_success"/>-->
+              <!--&lt;!&ndash;测试不填服务码注册成功&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.register.RegisterWithoutSerialCode"/>-->
+              <!--&lt;!&ndash;测试填服务码注册成功&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.register.RegisterWithCorrectSerialCode"/>-->
+              <!--&lt;!&ndash;测试修改支付密码成功&ndash;&gt;-->
+              <!--<class name="com.kkg.wap.revisepwd.ChangePayPwd"/>-->
+              <!--&lt;!&ndash;测试修改登录密码成功&ndash;&gt;-->
+
+              <!--常规测试用例结束-->
+
+             </classes>
+       </test>
+       <listeners>
+           <listener class-name="com.kkg.testngListener.RetryListener"></listener>
+           <listener class-name="com.kkg.testngListener.TestngListener"></listener>
+       </listeners>
+</suite>

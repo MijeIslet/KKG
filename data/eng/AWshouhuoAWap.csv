@@ -1,0 +1,8 @@
+key,depict,value,xpath
+url,跳转到待收货,,url!order3
+scroll,滑动100px,scroll,100
+click,点击确认收货,,//*[@id="refundBtn"]/div/span
+click,点击确认,,//*[@class="aui_buttons"]/button[1]
+,,,
+url,跳转到待收货,,url!order3
+seetext,检查指定文本,FALSE!orderNumber,orderNumber

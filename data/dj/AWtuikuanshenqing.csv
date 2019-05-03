@@ -1,0 +1,14 @@
+key,depict,value,xpath
+url,跳转到我的,,url!userhome
+isclick,点击可能出现的活动通知,,//*[@id='closeMask']
+click,点击待发货,,//*[@class='l-order-list ico-ul clearfix']/li[3]/a/div
+get,获取订单号,订单号：!orderNumber,//*[@id="container"]/div[@class='order_co_top']/div[@class='order_co_t_r']/a
+click,点击订单号进入详情,,//*[@id="container"]/div[@class='order_co_top']/div[@class='order_co_t_r']/a
+click,点击订单退款,,//*[@class='orderBtn']/a[@class='evaluate']
+,,,
+set,输入退款说明,阿斯蒂芬,//*[@id='reasonInfo']
+upload,上传图片,C:/Users/Administrator/Pictures/Feedback/{6B80786E-DCE1-4CA2-835F-2FC43D326E6C}/Capture001.png,//*[@id='photoFile1']
+,,,
+click,点击提交申请,,//*[@id='submitBtn']
+sleep,暂停1.5S,,1500
+seetext,判断是否提交成功,退款列表,退款列表

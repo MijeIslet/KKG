@@ -1,0 +1,14 @@
+key,depict,value,xpath
+,jindou-use=?
+url,跳转到首页,,url!index
+sleep,暂停0.2S,,200
+click,点击AG预订,,//*[@class='silver_price']/div[@class='reserve_img']
+click,点击立即购买,,//*[@class='btn btn-danger btn-buy']
+click,点击选择快递,,//*[@id='kuaidi']
+click,点击提交订单,,//*[@class='J_payBtn btn btn-danger btn-buy']
+set,输入金豆,set!jindou-use,//*[@id='payBounty']
+click,点击确认支付,,//*[@class='confirm-payment']
+set,输入支付密码,111111,//*[@id='pay-password']
+click,点击确定,,//*[@class='affirm']
+sleep,暂停0.1S,,100
+

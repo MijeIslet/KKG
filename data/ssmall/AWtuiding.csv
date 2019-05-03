@@ -1,0 +1,11 @@
+key,depict,value,xpath
+url,跳转到我的,,url!userhome
+isclick,点击可能出现的活动通知,,//*[@id='closeMask']
+click,点击预付款,,//*[@class='l-order-list ico-ul clearfix']/li[1]/a/div
+click,点击退订,,//*[@id="des_cont_ul_hx"]/li/div[@class='des_cont_btn']/div/a[@class='des_btn_unsubscribe']
+sleep,暂停2S,,2000
+refresh,refresh,refresh,refresh
+click,点击历史订单,,//*[@class='des_head_in']/li[2]/p
+click,点击指定订单,get!orderNumber,//*[@id="lsdd_list"]/li[1]/a
+seetext,检查指定文本,get!orderNumber,orderNumber
+get,获取货值增减,￥!top_profitClose,//*[@id='top_profitClose']

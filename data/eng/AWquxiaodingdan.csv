@@ -1,0 +1,5 @@
+key,depict,value,xpath
+url,跳转到待付款,,url!order1
+click,点击取消订单,,//*[@id="container"]/div[3]/div[3]/div/span[1]
+click,点击确认,,//*[@class='aui_buttons']/button[1]
+sleep,暂停3S,,3000

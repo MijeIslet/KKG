@@ -1,0 +1,12 @@
+key,depict,value,xpath
+url,跳转到待发货,,url!order2
+get,获取订单号,order number：!orderNumber,//*[@id="container"]/div[3]/div[1]/a
+click,点击订单号进入详情,,//*[@id="container"]/div[3]/div[1]/a
+click,点击订单退款,,//*[@class='orderBtn']/a[@class='evaluate']
+,,,
+set,输入退款说明,阿斯蒂芬,//*[@id='reasonInfo']
+upload,上传图片,C:/Users/Administrator/Pictures/Feedback/{6B80786E-DCE1-4CA2-835F-2FC43D326E6C}/Capture001.png,//*[@id='photoFile1']
+,,,
+click,点击提交申请,,//*[@id='submitBtn']
+sleep,暂停1.5S,,1500
+seetext,判断是否提交成功,Refund list,Refund list

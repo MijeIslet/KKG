@@ -1,0 +1,14 @@
+key,depict,value,xpath
+click,点击进入店铺,,//*[@id='hdtop']/div[1]/ul/li[2]/a
+click,点击商品订单,,//*[@id='ordersManage']/a
+set,输入订单号,set!orderNumber,//*[@id='subNumber']
+click,点击搜索订单,,//*[@class='ser-nick']/input[@class='but-serch']
+hover,鼠标悬停,,//*[@class='sold-table']/tbody/tr[3]/td[9]/ul/li[1]/a
+click,点击手工发货,,//*[@class='sold-table']/tbody/tr[3]/td[9]/ul/li[1]/ul/li
+,,,
+goiframe,进入ifame,,//*[@name='OpendeliverGoods']
+set,输入订单号,set!orderNumber,//*[@id='dvyFlowId']
+set,输入订单号,set!orderNumber,//*[@id='remark']
+click,点击发货,,//div[@id='edit-cont']/div/div/div[5]/a[2]
+endiframe,退出ifame,,//*[@name='OpendeliverGoods']
+click,点击确定发货,,//*[@class='aui_dialog']/tbody/tr[3]/td/div/button[1]

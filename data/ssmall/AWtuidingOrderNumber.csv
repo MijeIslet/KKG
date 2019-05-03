@@ -1,0 +1,19 @@
+key,depict,value,xpath
+url,跳转到我的,,url!userhome
+isclick,点击可能出现的活动通知,,//*[@id='closeMask']
+sleep,暂停0.2S,,200
+click,点击预付款,,//*[@class='l-order-list ico-ul clearfix']/li[1]/a/div
+sleep,暂停0.2S,,200
+click,点击指定订单,get!orderNumber,"//a[contains(@href,'get!')]"
+sleep,暂停3S,,3000
+scroll,滚动,,500
+get,获取下预订单后的单价,map_orderPrice,//*[@id='map_orderPrice']
+click,点击退订,,//*[@class='ret_btn_in1']/a[2]
+sleep,暂停3S,,3000
+refresh,refresh,,refresh
+click,点击历史订单,,//*[@class='des_head_in']/li[2]/p
+click,点击指定订单,get!orderNumber,//*[@id="lsdd_list"]/li[1]/a
+seetext,检查指定文本,get!orderNumber,orderNumber
+scroll,滚动,,500
+get,获取下预订单后的单价,map_priceOpen,//*[@id='map_priceOpen']
+get,获取货值增减,￥!top_profitClose,//*[@id='top_profitClose']

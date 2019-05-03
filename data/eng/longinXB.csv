@@ -1,0 +1,6 @@
+key,depict,value,xpath
+url,小B登录url,,url!longinXB
+set,输入用户名,13800138000,//*[@id='username']
+set,输入密码,111111,//*[@id='pwd']
+click,点击登录,,//*[@class='btn-img btn-entry']
+sleep,暂停3S,,3000

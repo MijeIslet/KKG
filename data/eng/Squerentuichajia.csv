@@ -1,0 +1,10 @@
+key,depict,value,xpath
+goiframe,进入ifame,,/html/body/div/div[1]/section[2]/iframe
+set,输入订单号,set!orderNumber,/html/body/div/div[1]/div[2]/div[1]/div[1]/div[1]/input
+click,点击查询,,/html/body/div/div[1]/div[2]/div[2]/a[1]
+click,点击勾选,,//*[@id='jqGrid']/tbody/tr[2]/td[2]
+click,点击审查,,/html/body/div/div[1]/div[2]/div[3]/a
+click,点击同意,,/html/body/div[1]/div[2]/div/ul/li[6]/div/label[1]/input
+click,点击提交,,/html/body/div[1]/div[2]/div/div/a[1]
+endiframe,退出ifame,,/html/body/div/div[1]/section[2]/iframe
+click,点击确认,,//*[@id='layui-layer1']/div[3]/a

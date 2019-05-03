@@ -1,0 +1,16 @@
+key,depict,value,xpath
+,jindou-use=?
+url,跳转到首页,,url!index
+sleep,暂停1.5S,,1500
+click,点击关闭,,//*[@id="closeMask"]
+click,点击AU预订,,//*[@class='gold_price']/div[@class='reserve_img']
+click,点击立即购买,,//*[@class='btn btn-danger btn-buy']
+click,点击选择自提,,//*[@id='ziti']
+click,点击提交订单,,//*[@class='J_payBtn btn btn-danger btn-buy']
+set,输入金豆,set!jindou-use,//*[@id='payBounty']
+get,获取实付款,payAmount,//*[@id='payAmount']
+click,点击确认支付,,//*[@class='confirm-payment']
+set,输入支付密码,123456,//*[@id='pay-password']
+click,点击确定,,//*[@class='affirm']
+sleep,暂停3S,,3000
+

@@ -1,0 +1,7 @@
+key,depict,value,xpath
+url,跳转到我的,,url!userhome
+isclick,点击可能出现的活动通知,,//*[@id='closeMask']
+click,点击待发货,,//*[@class='l-order-list ico-ul clearfix']/li[2]/a/div
+click,点击取消订单,,//*[@class='J_closeOrder btn btn-default']
+click,点击确认,,//*[@class='aui_buttons']/button[1]
+sleep,暂停3S,,3000

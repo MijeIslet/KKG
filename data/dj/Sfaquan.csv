@@ -1,0 +1,15 @@
+key,depict,value,xpath
+,quanpicihao=?,,
+click,点击商城用户管理,,//*[@class='sidebar']/ul/li[15]/a
+click,点击预付款券管理,,//*[@class='sidebar-menu']/li[15]/ul/li[7]/a
+refresh,refresh,,refresh
+,,,
+goiframe,进入ifame,,/html/body/div/div[1]/section[2]/iframe
+set,输入券批次号,set!quanpicihao,/html/body/div/div[1]/div[2]/div[1]/div[1]/input
+click,点击查询,,/html/body/div/div[1]/div[2]/div[2]/a[4]
+click,点击发券,,/html/body/div/div[1]/div[3]/div[3]/div[3]/div/table/tbody/tr[2]/td[19]/a[3]
+set,输入logincode,set!logincode,/html/body/div/div[3]/div/ul/li/textarea
+click,点击提交,,/html/body/div/div[3]/div/div/a[1]
+endiframe,退出ifame,,/html/body/div/div[1]/section[2]/iframe
+,,,
+click,点击确认,,//*[@class='layui-layer-btn0']

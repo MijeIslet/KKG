@@ -1,0 +1,9 @@
+key,depict,value,xpath
+click,点击进入店铺,,//*[@id='hdtop']/div[1]/ul/li[2]/a
+click,点击商品订单,,//*[@id='ordersManage']/a
+set,输入订单号,set!orderNumber,//*[@id='subNumber']
+click,点击搜索订单,,//*[@class='ser-nick']/input[@class='but-serch']
+click,点击确认发货,,//*[@class='sold-table']/tbody/tr[3]/td[9]/ul/li[1]/a
+,,,
+click,点击确定发货,,//*[@class='aui_dialog']/tbody/tr[3]/td/div/button[1]
+sleep,暂停5s,,5000

@@ -1,0 +1,6 @@
+key,depict,value,xpath
+click,跳转到系统,,//*[@id="topbar-collapse"]/ul[1]/li[8]/a
+click,点击短信发送历史,,//*[@id="collapse-nav0"]/li[@id="menuId-756"]/a
+set,输入手机号,set!mobile,//*[@id='form1']/table/tbody/tr/td/div/input[3]
+click,点击搜索,,//*[@id='form1']/table/tbody/tr/td/div/input[4]
+get,获取验证码,code!code,//*[@id='item']/tbody/tr[1]/td[4]

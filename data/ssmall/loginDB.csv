@@ -1,0 +1,6 @@
+key,depict,value,xpath
+url,大B登录url,,url!loginDB
+set,输入用户名,home,//*[@id="command"]/div[2]/div/input[2]
+set,输入密码,778899,//*[@id="command"]/div[3]/div/input
+click,点击登录,,//*[@id="command"]/div[4]/button
+sleep,暂停3S,,3000
